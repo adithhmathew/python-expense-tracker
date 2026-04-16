@@ -7,6 +7,12 @@ The app allows users to manage daily expenses through a clean web interface with
 
 ---
 
+## Live Demo
+
+https://expense-tracker-p21d.onrender.com/
+
+---
+
 ## Features
 
 * Add expenses with amount, category, description, and date
@@ -68,10 +74,12 @@ expense_tracker/
 
 ## Deployment
 
-This project is ready to be deployed using platforms like Render.
+This project is deployed on Render.
 
-Start command used for deployment:
+Start command used:
 gunicorn app:app
+
+Note: On free hosting, the app may go to sleep after inactivity and data stored in CSV may not persist permanently.
 
 ---
 
@@ -91,10 +99,10 @@ gunicorn app:app
 ## Future Improvements
 
 * Replace CSV with a database (SQLite/MySQL)
-* Add user authentication (login/signup)
 * Add charts for data visualization
+* Add user authentication system
 * Improve UI/UX further
-* Deploy with persistent storage
+* Ensure persistent storage in deployment
 
 ---
 
