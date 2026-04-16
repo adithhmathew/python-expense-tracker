@@ -1,0 +1,8 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="text-center">
+    <h2>Total Spending</h2>
+    <h1 class="display-4 mt-3">₹{{ "%.2f"|format(total) }}</h1>
+</div>
+{% endblock %}

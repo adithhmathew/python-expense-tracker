@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h2 class="mb-4">All Expenses</h2>
+
+<form method="GET" class="mb-4">
+    <input type="text" name="q" value="{{ query or '' }}" class="form-control" placeholder="Search">
+    <button class="btn btn-primary mt-2">Search</button>
+</form>
+
+<div class="row">
+    {% for i, expense in expenses %}
+        <div class="col-md-4">
+            <div class="card p-3 mb-3 shadow-sm">
+                <h5>₹{{ expense[0] }}</h5>
+                <p>{{ expense[1] }}</p>
+                <p>{{ expense[2] }}</p>
+                <p>{{ expense[3] }}</p>
+
+                <a href="/edit/{{ i }}" class="btn btn-warning btn-sm">Edit</a>
+                <a href="/delete/{{ i }}" class="btn btn-danger btn-sm mt-1">Delete</a>
+            </div>
+        </div>
+    {% endfor %}
+</div>
+{% endblock %}

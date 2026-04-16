@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h2 class="mb-4">Add Expense</h2>
+
+<form method="POST">
+    <input type="text" name="amount" class="form-control mb-2" placeholder="Amount">
+    <input type="text" name="category" class="form-control mb-2" placeholder="Category">
+    <input type="text" name="desc" class="form-control mb-2" placeholder="Description">
+    <input type="date" name="date" class="form-control mb-3">
+
+    <button class="btn btn-primary">Add Expense</button>
+</form>
+{% endblock %}

@@ -9,6 +9,7 @@ try:
                 "amount": float(row[0]),
                 "category": row[1],
                 "description": row[2]
+                "date": row[3]
             }
             expenses.append(expense)
 except FileNotFoundError:
@@ -27,6 +28,7 @@ def add_expense():
         "amount": amount,
         "category": category,
         "description": desc
+        "date": date
     }
 
     expenses.append(expense)
@@ -78,6 +80,8 @@ while True:
         total_expenses()
     elif choice == 4:
         category_summary()
+    elif choice == 5:
+        break
     else:
         print("Invalid choice. Try again")
 

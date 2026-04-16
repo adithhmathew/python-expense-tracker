@@ -1,20 +1,23 @@
-# Expense Tracker (Python + Flask)
+# Expense Tracker (Flask Web App)
 
 ## Description
 
-A simple expense tracking web application built using Python and Flask.
-It allows users to add, view, and analyze their daily expenses through a clean web interface.
+A full-featured expense tracking web application built using Python and Flask.
+The app allows users to manage daily expenses through a clean web interface with data storage and analysis features.
 
 ---
 
 ## Features
 
-* Add expenses (amount, category, description)
-* View all expenses in a structured format
+* Add expenses with amount, category, description, and date
+* View all expenses in a structured layout
+* Edit and delete existing expenses
+* Search and filter expenses by category, description, or date
 * Calculate total spending
+* Category-wise summary
+* Monthly expense tracking
+* Clean and responsive UI using Bootstrap
 * Persistent storage using CSV file
-* Web interface using Flask
-* Clean and responsive UI design
 
 ---
 
@@ -23,7 +26,7 @@ It allows users to add, view, and analyze their daily expenses through a clean w
 * Python
 * Flask
 * HTML
-* CSS
+* Bootstrap (CSS framework)
 * CSV (for data storage)
 
 ---
@@ -33,22 +36,27 @@ It allows users to add, view, and analyze their daily expenses through a clean w
 expense_tracker/
 │
 ├── app.py
+├── requirements.txt
 ├── expenses.csv
 ├── templates/
+│   ├── base.html
 │   ├── home.html
 │   ├── add.html
 │   ├── view.html
-│   └── total.html
+│   ├── edit.html
+│   ├── summary.html
+│   ├── total.html
+│   └── monthly.html
 ├── README.md
 
 ---
 
-## How to Run
+## How to Run Locally
 
-1. Clone or download the project
+1. Clone the repository
 
-2. Install Flask:
-   pip install flask
+2. Install dependencies:
+   pip install -r requirements.txt
 
 3. Run the application:
    python app.py
@@ -58,29 +66,38 @@ expense_tracker/
 
 ---
 
+## Deployment
+
+This project is ready to be deployed using platforms like Render.
+
+Start command used for deployment:
+gunicorn app:app
+
+---
+
 ## What I Learned
 
-* Building backend applications using Flask
+* Building full-stack web applications using Flask
 * Handling user input through web forms
-* Using lists and dictionaries for data management
-* File handling with CSV for persistent storage
-* Error handling using try-except
-* Structuring and organizing a full project
+* Implementing CRUD operations (Create, Read, Update, Delete)
+* File handling using CSV for persistent storage
+* Data filtering and search functionality
+* Using template inheritance in Flask (base.html)
+* Designing responsive UI using Bootstrap
+* Structuring and organizing a real-world project
 
 ---
 
 ## Future Improvements
 
-* Category-wise summary page
-* Edit/Delete expenses
-* Better UI using Bootstrap
-* Database integration (SQLite/MySQL)
-* User authentication system
+* Replace CSV with a database (SQLite/MySQL)
+* Add user authentication (login/signup)
+* Add charts for data visualization
+* Improve UI/UX further
+* Deploy with persistent storage
 
 ---
 
 ## Acknowledgement
 
 This project was built as part of my learning journey in Computer Science Engineering.
-
----
